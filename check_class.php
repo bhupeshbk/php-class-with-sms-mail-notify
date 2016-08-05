@@ -14,9 +14,9 @@ if($SMSsend == 1){
     $sms_port = "8080";
     $sms_username = "bhupesh";
     $sms_password = "*******";
-    $sms_sender = "PRAGMA";
+    $sms_sender = "BHUPESH";
 	$message = "Hello";
-	$mobile = "9924773417";
+	$mobile = "1234567890";
 	
 	$push = new sendSMS($sms_host ,$sms_port ,$sms_username ,$sms_password ,$sms_sender ,$message ,$mobile);
 	$res = $push->sendSmtpMail();
@@ -26,10 +26,10 @@ if($SMSsend == 1){
 * Send Simple PHP Mail
 * ————————————————————————————————————————————————————————————————————————————————————— */
 if($PhpMail == 1){	
-	$to = "bhupeshbk@yahoo.com";
-    $cc = "bhupeshbk.143@gmail.com";
-    $Subject = "Send Mail";
-    $from = "notification.ckpcet@gmail.com";
+	$to = "to@yahoo.com";
+        $cc = "cc@gmail.com";
+        $Subject = "Send Mail";
+        $from = "from@gmail.com";
 	$html = "Hello,Phpmail";
 	
 	$push = new PHPsendMail($to ,$cc ,$Subject ,$from ,$html);
@@ -40,12 +40,12 @@ if($PhpMail == 1){
 * Send SMTP PHP Mail
 * ————————————————————————————————————————————————————————————————————————————————————— */
 if($SmtpMail == 1){
-	$Username = "notification.ckpcet@gmail.com";
-    $Password = "ckpcet2015";
-    $SMTPSecure = "tls";
-    $Port = "587";
-    $Subject = "Send Mail";
-    $to = "bhupeshbk@yahoo.com";
+	$Username = "user@gmail.com";
+        $Password = "password";
+        $SMTPSecure = "tls";
+        $Port = "587";
+        $Subject = "Send Mail";
+        $to = "to@yahoo.com";
 	$to_name = "Bhupesh Kushwaha";
 	$html = "Hello,Phpmail";
 	
@@ -57,13 +57,13 @@ if($SmtpMail == 1){
 * Push Notification Android
 * ————————————————————————————————————————————————————————————————————————————————————— */
 if($pushNotify == 1){
-	$push_token = "dFYO7QmTdDU:APA91bG-ovainribbeTKs6dcXMBqiXLYO6vPIZyRoB54mvY7hsvtAd0Ic1pS8V8R0fX3YrPiCrrK27zuBBzeV1RybrlbfoyLw5tFqV6Y5ipg436zflcjCGrzG9YzOxVlyyfjMLqsQmH8";
+	$push_token = "Device REG-ID";
 	$c_id = "180";
 	$push = new PushNotification_Android('The push title','The message',$push_token ,$c_id);
 	$ret = $push->sendToAndroid();
 	print_r($ret);
 	
-	$push_token = "d6QqUsX17D4:APA91bFo4X733hkYWXygdL6kVfEtc-rJA6jug0qEP0y9yWt7zFAwt0dBEb1AYoMVAYcKaV_lRBJRLlrtTEOeRYnpmOSZZlLL1BRqFda8pAUFUJ8XKwLOfWgte1PrbWg_muWWQBu5T9St";
+	$push_token = "Device REG-ID";
 	$d_id = "33";
 	$push = new PushNotification_Android('The push title','The message',$push_token ,$d_id);
 	$ret = $push->sendToAndroid();
