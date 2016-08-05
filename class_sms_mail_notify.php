@@ -166,7 +166,7 @@ Class PushNotification_Android {
 	private $type;
 
     private static $ANDROID_URL = 'https://android.googleapis.com/gcm/send';
-    private static $ANDROID_API_KEY = 'AIzaSyCuDNF-s00WYvbKUWg4QuQXrRzGqluDlDo';
+    private static $ANDROID_API_KEY = 'YOUR-KEY';
 
     public function __construct($title, $message, $pushtoken , $cd_id ,$type){
         $this->title = $title;
