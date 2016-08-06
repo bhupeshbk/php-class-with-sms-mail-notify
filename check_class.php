@@ -57,15 +57,16 @@ if($SmtpMail == 1){
 * Push Notification Android
 * ————————————————————————————————————————————————————————————————————————————————————— */
 if($pushNotify == 1){
+	$type = "Demo Notify";
 	$push_token = "Device REG-ID";
 	$c_id = "180";
-	$push = new PushNotification_Android('The push title','The message',$push_token ,$c_id);
+	$push = new PushNotification_Android('The push title','The message',$push_token ,$c_id,$type);
 	$ret = $push->sendToAndroid();
 	print_r($ret);
 	
 	$push_token = "Device REG-ID";
 	$d_id = "33";
-	$push = new PushNotification_Android('The push title','The message',$push_token ,$d_id);
+	$push = new PushNotification_Android('The push title','The message',$push_token ,$d_id,$type);
 	$ret = $push->sendToAndroid();
 	print_r($ret);
 }
