@@ -28,7 +28,7 @@ if($SMSsend == 1){
 	$mobile = "1234567890";
 	
 	$push = new sendSMS($sms_host ,$sms_port ,$sms_username ,$sms_password ,$sms_sender ,$message ,$mobile);
-	$res = $push->sendSmtpMail();
+	$res = $push->sendSMS();
 	print_r($res);
 }
 
