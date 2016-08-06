@@ -22,7 +22,7 @@ class sendSMS
 		$this->mobile = $mobile;
     }
 	
-    public function sendSmtpMail(){
+    public function sendSMS(){
 		include_once('sms.php');
 		
 		$obj = new Sender($this->sms_host , $this->sms_port, $this->sms_username, $this->sms_password, $this->sms_sender, $this->message , $this->mobile, "0", "1");
