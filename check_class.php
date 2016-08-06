@@ -11,15 +11,15 @@ $pushNotify = 0;
 * ————————————————————————————————————————————————————————————————————————————————————— */
 if($SMSsend == 1){		
 	$sms_host = "192.168.0.101";
-    $sms_port = "8080";
-    $sms_username = "bhupesh";
-    $sms_password = "*******";
-    $sms_sender = "BHUPESH";
+        $sms_port = "8080";
+        $sms_username = "bhupesh";
+        $sms_password = "*******";
+        $sms_sender = "BHUPESH";
 	$message = "Hello";
 	$mobile = "1234567890";
 	
 	$push = new sendSMS($sms_host ,$sms_port ,$sms_username ,$sms_password ,$sms_sender ,$message ,$mobile);
-	$res = $push->sendSmtpMail();
+	$res = $push->sendSMS();
 	print_r($res);
 }
 /* —————————————————————————————————————————————————————————————————————————————————————
